@@ -1,1 +1,268 @@
-content
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link rel="stylesheet" href="./dist/css/main.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="container">
+            <div class="header-logo">
+                <span>MEECAN</span>
+            </div>
+            <nav id="navbar">
+                <i class="fa-solid fa-xmark" data-navbar-toggle></i>
+                <ul>
+                    <li><a href="#" class="navlink active">Home</a></li>
+                    <li><a href="#about-me" class="navlink">About</a></li>
+                    <li><a href="#portfolio" class="navlink">Portfolio</a></li>
+                    <li><a href="#contact" class="navlink">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="navbar-backdrop" data-navbar-toggle></div>
+            <div class="header-extra">
+                <a class="btn primary-btn" href="mailto:cannhann4201@gmail.com">Hire me <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="navbar-toggle" data-navbar-toggle>
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    
+    <div id="hero" data-section="#">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-mini-title">Hey, I’m Mehmet Can</span>
+                <h1 class="hero-title">Frontend Javascript Developer</h1>
+                <img src="./dist/img/src/components/hero-underline.svg" alt="Underline image">
+                <div class="hero-buttons">
+                    <a href="#" class="hero-btn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="hero-btn">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="hero-btn">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-img">
+                <img src="./dist/img/src/about/ray-so-export.png" alt="John Carter person image">
+            </div>
+        </div>
+    </div>
+
+    <main id="content">
+        <section class="about" id="about-me" data-section="#about-me">
+            <div class="container section-container">
+                <div class="row d-flex about-tab">
+                    <div class="col-md-12 tab-content-cover">
+                        <span class="mini-title">ABOUT ME</span>
+                        <h2 class="tab-title">A dedicated Front-end Developer based in Konya, Turkey</h2>
+                        <div class="tab-content">
+                            <p>Hello there! My name is Mehmet Can E., and I am a junior frontend developer who is dedicated to continuing my professional growth within the web technology world.</p>
+                            <p>Since deciding to pursue web development in 2019, I have devoted myself to constantly learning and gaining experience.</p>
+                            <p>To stay active and knowledgeable in the field of web development, I am interested in not only frontend technologies but also backend programming languages such as Python, NodeJS, PHP, as well as server maintenance and configuration on Apache & Nginx.</p>
+                            <div class="tech-stack">
+                                <span class="hts-title">Tech Stack</span>
+                                <ul>
+                                    <li class="hts-item hts-html" title="HTML5">
+                                        <img src="./dist/img/src/icons/html.svg" alt="Html language icon">
+                                    </li>
+                                    <li class="hts-item hts-css" title="CSS3">
+                                        <img src="./dist/img/src/icons/css.svg" alt="Css language icon">
+                                    </li>
+                                    <li class="hts-item hts-sass" title="Sass & Scss">
+                                        <img src="./dist/img/src/icons/sass.svg" alt="Sass language icon">
+                                    </li>
+                                    <li class="hts-item hts-tailwind" title="Tailwind CSS">
+                                        <img src="./dist/img/src/icons/tailwind.svg" alt="Tailwind language icon">
+                                    </li>
+                                    <li class="hts-item hts-js" title="Javascript">
+                                        <img src="./dist/img/src/icons/javascript.svg" alt="Javascript language icon">
+                                    </li>
+                                    <li class="hts-item hts-ts" title="Typescript">
+                                        <img src="./dist/img/src/icons/typescript.svg" alt="Typescript language icon">
+                                    </li>
+                                    <li class="hts-item hts-react">
+                                        <img src="./dist/img/src/icons/react.svg" alt="React language icon" title="React JS">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+
+        <section class="articles" id="portfolio" data-section="#portfolio">
+            <div class="container section-container">
+                <div class="articles-header">
+                    <div class="ah-left">
+                        <span class="mini-title">PORTFOLIO</span>
+                        <h2>Take a Look At My Prominent Projects</h2>
+                    </div>
+                </div>
+                <div class="articles-content">
+                    <div class="portfolio-slider slider-container">
+                        
+                        <div class="slider-item">
+                            <div class="article-item">
+                                <div class="ai-img">
+                                    <img src="./dist/img/src/articles/article-1.jpg" alt="">
+                                    <div class="ai-controls">
+                                        <a href="#"><i class="fa-brands fa-github"></i> Source Code</a>
+                                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                                    </div>
+                                </div>
+                                <div class="ai-content">
+                                    <h3 class="ai-heading">Blog Website</h3>
+                                    <div class="ai-info">
+                                        <span class="ai-category">React, NodeJS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-item">
+                            <div class="article-item">
+                                <div class="ai-img">
+                                    <img src="./dist/img/src/articles/article-2.jpg" alt="">
+                                    <div class="ai-controls">
+                                        <a href="#"><i class="fa-brands fa-github"></i> Source Code</a>
+                                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                                    </div>
+                                </div>
+                                <div class="ai-content">
+                                    <h3 class="ai-heading">Ecommerce Website</h3>
+                                    <div class="ai-info">
+                                        <span class="ai-category">Figma Design</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-item">
+                            <div class="article-item">
+                                <div class="ai-img">
+                                    <img src="./dist/img/src/articles/article-3.jpg" alt="">
+                                    <div class="ai-controls">
+                                        <a href="#"><i class="fa-brands fa-github"></i> Source Code</a>
+                                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                                    </div>
+                                </div>
+                                <div class="ai-content">
+                                    <h3 class="ai-heading">Ecommerce Website</h3>
+                                    <div class="ai-info">
+                                        <span class="ai-category">Design</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-item">
+                            <div class="article-item">
+                                <div class="ai-img">
+                                    <img src="./dist/img/src/articles/article-2.jpg" alt="">
+                                    <div class="ai-controls">
+                                        <a href="#"><i class="fa-brands fa-github"></i> Source Code</a>
+                                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                                    </div>
+                                </div>
+                                <div class="ai-content">
+                                    <h3 class="ai-heading">Ecommerce Website</h3>
+                                    <div class="ai-info">
+                                        <span class="ai-category">Design</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-item">
+                            <div class="article-item">
+                                <div class="ai-img">
+                                    <img src="./dist/img/src/articles/article-2.jpg" alt="">
+                                    <div class="ai-controls">
+                                        <a href="#"><i class="fa-brands fa-github"></i> Source Code</a>
+                                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                                    </div>
+                                </div>
+                                <div class="ai-content">
+                                    <h3 class="ai-heading">Ecommerce Website</h3>
+                                    <div class="ai-info">
+                                        <span class="ai-category">Design</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-item">
+                            <div class="article-item">
+                                <div class="ai-img">
+                                    <img src="./dist/img/src/articles/article-2.jpg" alt="">
+                                    <div class="ai-controls">
+                                        <a href="#"><i class="fa-brands fa-github"></i> Source Code</a>
+                                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                                    </div>
+                                </div>
+                                <div class="ai-content">
+                                    <h3 class="ai-heading">Ecommerce Website</h3>
+                                    <div class="ai-info">
+                                        <span class="ai-category">Design</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="contact" id="contact" data-section="#contact">
+            <div class="container">
+                <span class="mini-title">CONTACT</span>
+                <h2>Contact With Me</h2>
+                <div class="contact-items-list row">
+                    <div class="col-lg-4 col-md-6 col-xs-12">
+                        <a class="contact-item" href="mailto:cannhann4201@gmail.com">
+                            <div class="ci-icon"><i class="fa-regular fa-envelope"></i></div>
+                            <div class="ci-content">
+                                <div class="ci-title">E-Mail</div>
+                                <div class="ci-contact">cannhann4201@gmail.com</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <footer id="footer">Copyright &copy; 2023 | All Rights are Free.</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="./dist/js/main.js"></script>
+</body>
+
+</html>
