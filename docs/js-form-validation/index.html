@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./dist/styles/main.css">
+    <link rel="stylesheet" href="./dist/styles/validation.css">
+
+    <link rel="stylesheet" href="./dist/styles/highlight.css">
+    <script src="./dist/js/highlight.js"></script>
+</head>
+<body>
+    
+    <aside id="sidebar">
+        <div class="sidebar-heading">
+            <h1>JS Form Validation</h1>
+        </div>
+        <div class="sidebar-content">
+            <a href="#" class="sidebar-item">
+                <!-- <i class="fa-solid fa-home"></i> -->
+                <span>Home</span>
+            </a>
+            <a href="#installation" class="sidebar-item">
+                <!-- <i class="fa-solid fa-file-zipper"></i> -->
+                <span>Installation</span>
+            </a>
+            <a href="#demo" class="sidebar-item">
+                <!-- <i class="fa-solid fa-eye"></i> -->
+                <span>Demo</span>
+            </a>
+            <a href="#examples" class="sidebar-item">
+                <!-- <i class="fa-solid fa-border-all"></i> -->
+                <span>Usage Examples</span>
+            </a>
+            <a href="#first-time-errors" class="sidebar-item">
+                <!-- <i class="fa-solid fa-star-of-life"></i> -->
+                <span>First Time Errors</span>
+            </a>
+            <a href="#server-side-demo" class="sidebar-item">
+                <span>Server-side Demo</span>
+            </a>
+            <a href="#server-side-integration" class="sidebar-item">
+                <span>Server-side Integration</span>
+            </a>
+            
+        </div>
+        <div class="sidebar-buttons">
+            <a href="https://github.com/meecan/js-form-validation" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> See on Github</a>
+        </div>
+    </aside>
+
+    <div class="sidebar-backdrop sidebar-toggle"></div>
+
+    
+    <main id="content">
+        <header id="header">
+            <div class="header-left">
+                <span class="sidebar-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </span>
+            </div>
+            <div class="header-right">
+                <div class="header-search">
+                    <label class="header-search-bar search-active">
+                        <i class="fa-solid fa-search"></i>
+                        <input type="text" placeholder="Search..." id="searchInput">
+                        <i class="fa-solid fa-xmark" onclick="clearSearch()"></i>
+                    </label>
+                    <div class="header-search-dropdown">
+                        <a href="#" class="hsd-item" data-keys="download, plugin">
+                            <span class="hsd-heading">Download</span>
+                            <span class="hsd-nav">Home</span>
+                        </a>
+                        <a href="#features" class="hsd-item" data-keys="features">
+                            <span class="hsd-heading">Features</span>
+                            <span class="hsd-nav">Features</span>
+                        </a>
+                        <a href="#installation" class="hsd-item" data-keys="installation, javascript usage, cdn">
+                            <span class="hsd-heading">Installation</span>
+                            <span class="hsd-nav">Installation</span>
+                        </a>
+                        <a href="#demo" class="hsd-item" data-keys="demo, examples">
+                            <span class="hsd-heading">Demo</span>
+                            <span class="hsd-nav">Demo</span>
+                        </a>
+                        <a href="#examples" class="hsd-item" data-keys="how to html usage examples email input text input password input number input date input url input radio input checkbox input regex pattern textarea input file input">
+                            <span class="hsd-heading">Examples</span>
+                            <span class="hsd-nav">Usage Examples</span>
+                        </a>
+                        <a href="#first-time-errors" class="hsd-item" data-keys="first time errors">
+                            <span class="hsd-heading">First Time Errors</span>
+                            <span class="hsd-nav">First Time Errors</span>
+                        </a>
+                        <a href="#server-side-demo" class="hsd-item" data-keys="server side demo">
+                            <span class="hsd-heading">Server Side Demo</span>
+                            <span class="hsd-nav">Server Side Demo</span>
+                        </a>
+                        <a href="#server-side-integration" class="hsd-item" data-keys="server side integration">
+                            <span class="hsd-heading">Server Side Integration</span>
+                            <span class="hsd-nav">Server Side Integration</span>
+                        </a>
+                        <a href="https://github.com/meecan/js-form-validation" class="hsd-item" data-keys="github">
+                            <span class="hsd-heading">Github</span>
+                            <span class="hsd-nav">Home</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <section class="hero">
+            <div class="container section-container">
+                <h1>Javascript <br> Form Validation Plugin</h1>
+                <p>A form validation plugin that is completely free to use and easy to implement. It is built using vanilla JavaScript and offers a user-friendly experience.</p>
+                <a href="https://github.com/meecan/js-form-validation/archive/refs/heads/main.zip" class="btn btn-primary"><i class="fa-solid fa-download"></i> Download Plugin</a>
+                <a href="https://github.com/meecan/js-form-validation" class="btn btn-dark"><i class="fa-brands fa-github"></i> See On Github</a>
+                <div class="snippets">
+                    <span class="snippet">
+                        <img src="https://img.shields.io/github/downloads/meecan/js-form-validation/total.svg?style=flat-square">
+                    </span>
+                    <span class="snippet">
+                        <img src="https://img.shields.io/badge/licence-MIT-green.svg?style=flat-square">
+                    </span>
+                    <span class="snippet">
+                        <img src="https://img.shields.io/badge/min._file_size-2.00_kB-blue.svg?style=flat-square">
+                    </span>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="section-divider"></div>
+
+
+        <section class="features" id="features">
+            <div class="container section-container">
+                <h2>Features</h2>
+                <div class="fitem"><span>Real-time</span> change validation control.</div>
+                <div class="fitem">Disableable <span>first time errors</span>.</div>
+                <div class="fitem"><span>Client-side</span> & <span>server-side</span> validation support.</div>
+                <div class="fitem">Tested on various browsers.</div>
+                <div class="fitem">Highly <span>customizable</span>.</div>
+                <div class="fitem">Free and easy to use.</div>
+                <div class="fitem">Dependency free.</div>
+
+                <div class="note d-flex" style="background-color: #f5f5f5; padding: 10px 20px; border-radius: 10px;margin-top: 50px;">
+                    <div class="note-icon d-flex flex-column align-center justify-content-center" style="padding-right: 15px; font-size: 22px;opacity: .8;">
+                        <i class="fa-solid fa-circle-info"></i>
+                    </div>
+                    <div class="note-text" style="font-size: 14px;opacity: .8;">
+                        Like all JavaScript form validation plugins, it is only provide styling. For security reasons, server-side validation should be performed to ensure proper validation.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="section-divider"></div>
+
+
+        <section id="installation">
+            <div class="container section-container">
+                <h2>Installation</h2>
+                <p>Use CDN links below or <a href="https://github.com/meecan/js-form-validation">download</a> now on Github.</p>
+                <pre class="code"><code class="language-html">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/meecan/js-form-validation/validation.css"&gt;</code></pre>
+                <pre class="code"><code class="language-html">&lt;script src="https://cdn.jsdelivr.net/gh/meecan/js-form-validation/validation.js"&gt;&lt;/script&gt;</code></pre>
+                <pre class="code"><code class="language-js">const form = document.getElementById('myForm')
+window.onload = form.validation()</code></pre>
+            </div>
+        </section>
+
+
+        <div class="section-divider"></div>
+
+
+        <section id="demo">
+            <div class="container section-container">
+                <h2>Demo</h2>
+                <p>You can check the demo to see how it works. <br> Check out the <a href="#examples">examples</a> for more.</p>
+                <form action="" method="post" id="myForm" novalidate>
+                    <label>
+                        <span class="label-heading">*Email</span>
+                        <input type="email" placeholder="Enter an email..." name="email" minlength="6" maxlength="20" autocomplete="off" required>
+                    </label>
+                    <label>
+                        <span class="label-heading">*Text</span>
+                        <input type="text" placeholder="Enter an username..." name="text" maxlength="10" minlength="5" required >
+                    </label>
+                    <label>
+                        <span class="label-heading">*Password</span>
+                        <input type="password" id="password" placeholder="Enter an password..." required minlength="2">
+                    </label>
+                    <label>
+                        <span class="label-heading">*Equal for "#password"</span>
+                        <input type="password" placeholder="Confirm password..." required minlength="2" data-equal="#password">
+                    </label>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </section>
+
+
+        <div class="section-divider"></div>
+
+
+        <section id="examples">
+            <div class="container section-container">
+                <h2>Usage Examples</h2>
+
+                <div class="form-check fte">
+                    <input class="form-check-input" type="checkbox" id="fte-cbx">
+                    <label class="form-check-label" for="fte-cbx">
+                      First Time Errors
+                    </label>
+                </div>
+                <p class="heading-text">Check out the <a href="#first-time-errors">first time errors</a> section to learn <br> how to enable or disable it.</p>
+                        
+                <ul class="control-list">
+                    <li>
+                        <span data-type="email" class="active">Email input</span>
+                    </li>
+                    <li>
+                        <span data-type="text">Text input</span>
+                    </li>
+                    <li>
+                        <span data-type="password">Password inputs</span>
+                    </li>
+                    <li>
+                        <span data-type="number">Number input</span>
+                    </li>
+                    <li>
+                        <span data-type="date">Date input</span>
+                    </li>
+                    <li>
+                        <span data-type="url">URL input</span>
+                    </li>
+                    <li>
+                        <span data-type="radio">Radio inputs</span>
+                    </li>
+                    <li>
+                        <span data-type="checkbox">Checkbox inputs</span>
+                    </li>
+                    <li>
+                        <span data-type="regex">Using Regex</span>
+                    </li>
+                    <li>
+                        <span data-type="textarea">Textarea</span>
+                    </li>
+                    <li>
+                        <span data-type="file">File input</span>
+                    </li>
+                </ul>
+
+                <form action="" method="post" id="myForm2" novalidate>
+                    <h3 class="label-heading">Email Input</h3>
+                    <div id="myForm2InputArea">
+                        <label>
+                            <input type="email" placeholder="Enter an email..." minlength="6" maxlength="20" autocomplete="off" required>
+                        </label>
+                    </div>
+                    <div class="code-dropdown hide">
+                        <div class="control">
+                            <span class="show-dropdown">Show Code</span>
+                            <span class="hide-dropdown">Hide Code</span>
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                        <pre class="code"><code class="language-html">&lt;label&gt;
+    &lt;input type="email" placeholder="Enter an email..." minlength="6" maxlength="20" required&gt;
+&lt;/label&gt;</code></pre>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </section>
+
+
+        <div class="section-divider"></div>
+
+
+        <section id="first-time-errors">
+            <div class="container section-container">
+                <h2>First Time Errors</h2>
+                <p class="heading-text">To hide errors on initial load, please follow the example provided below. <br> The default value for the "firstTime" property has been set to "true".</p>
+                <pre class="mt-50 code"><code class="language-js">document.querySelector('#myForm').validation({
+    firstTime: false
+})</code></pre>
+            </div>
+        </section>
+
+        
+
+        <div class="section-divider"></div>
+
+
+        <section id="server-side-demo">
+            <div class="container section-container">
+                <h2>Server Side Demo</h2>
+                <p class="heading-text">You can check the server side demo to see how it works. <br> Check out the <a href="#server-side-integration">Server Side Integration</a> for more.</p>
+                <form action="" method="post" id="myForm3" novalidate>
+                    <label class="cl-label">
+                        <span class="label-heading">*Email (example@gmail.com)</span>
+                        <input type="email" class="form-control" placeholder="Enter an email..." name="form3Mail" id="form3Mail" autocomplete="off">
+                    </label>
+                    <label class="cl-label">
+                        <span class="label-heading">*Password (1234)</span>
+                        <input type="password" class="form-control" name="form3Password" id="form3Password" placeholder="Enter an password...">
+                    </label>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </section>
+        
+
+        <div class="section-divider"></div>
+
+
+        <section id="server-side-integration">
+            <div class="container section-container">
+                <h2>Server Side Integration</h2>
+                <p class="heading-text">Your server should return JSON data in the format provided in the second example.</p>
+                <pre class="code mt-50"><code class="language-js">const form = document.getElementById('myForm')
+
+const resultFromAPI = (data) => {
+    if (data.status == false) {
+        //invalid form
+        form.validation.setMessage(data.messages)
+    }else{
+        //valid form
+        form.validation.setMessage({})
+        alert('Successfuly...')
+    }
+}
+
+const requestToAPI = () => {
+    const mailValue = form.querySelector('#email').value
+    const passwordValue = form.querySelector('#password').value
+
+    const sentData = {
+        emailInput: mailValue,
+        passwordInput: passwordValue
+    }
+
+    fetch('http://example.com/path/to/api', //your API url
+        {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(sentData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            resultFromAPI(data) //your form configuration
+        })
+        .catch(error => console.error(error))
+}
+
+window.onload = form.validation({
+    realTime: false,
+    onSubmit: requestToAPI //your API connection
+})</code></pre>
+
+                <pre class="code mt-50"><code class="language-js">{
+    "status": false, //invalid form
+    "messages": {
+        "inputName": "message example..."
+        "inputName2": "message example 2..."
+    }
+}
+
+
+{
+    "status": true, //valid form
+}</code></pre>
+            </div>
+        </section>
+
+
+
+        <footer id="footer">
+            <div class="container">
+                <span><span>v1.0.0 | Powered by</span> <a href="https://github.com/meecan">meecan</a></span>
+            </div>
+        </footer>
+    </main>
+
+
+    
+
+
+
+    <script src="./dist/js/validation.min.js"></script>
+    <script src="./dist/js/main.js"></script>
+</body>
+</html>
