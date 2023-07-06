@@ -1,0 +1,283 @@
+body:not(.theme-dark) code[class*=language-],
+body:not(.theme-dark) pre[class*=language-] {
+    color: #000;
+    background: 0 0;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none
+}
+
+body:not(.theme-dark) code[class*=language-] ::-moz-selection,
+body:not(.theme-dark) code[class*=language-]::-moz-selection,
+body:not(.theme-dark) pre[class*=language-] ::-moz-selection,
+body:not(.theme-dark) pre[class*=language-]::-moz-selection {
+    text-shadow: none;
+    background: #b3d4fc
+}
+
+body:not(.theme-dark) code[class*=language-] ::selection,
+body:not(.theme-dark) code[class*=language-]::selection,
+body:not(.theme-dark) pre[class*=language-] ::selection,
+body:not(.theme-dark) pre[class*=language-]::selection {
+    text-shadow: none;
+    background: #b3d4fc
+}
+
+@media print {
+
+    body:not(.theme-dark) code[class*=language-],
+    body:not(.theme-dark) pre[class*=language-] {
+        text-shadow: none
+    }
+}
+
+body:not(.theme-dark) pre[class*=language-] {
+    padding: 1em;
+    overflow: auto
+}
+
+body:not(.theme-dark) :not(pre)>code[class*=language-],
+body:not(.theme-dark) pre[class*=language-] {
+    background: #f5f2f0
+}
+
+body:not(.theme-dark) :not(pre)>code[class*=language-] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal
+}
+
+body:not(.theme-dark) .token.cdata,
+body:not(.theme-dark) .token.comment,
+body:not(.theme-dark) .token.doctype,
+body:not(.theme-dark) .token.prolog {
+    color: #708090
+}
+
+body:not(.theme-dark) .token.punctuation {
+    color: #999
+}
+
+body:not(.theme-dark) .namespace {
+    opacity: .7
+}
+
+body:not(.theme-dark) .token.boolean,
+body:not(.theme-dark) .token.constant,
+body:not(.theme-dark) .token.deleted,
+body:not(.theme-dark) .token.number,
+body:not(.theme-dark) .token.property,
+body:not(.theme-dark) .token.symbol,
+body:not(.theme-dark) .token.tag {
+    color: #905
+}
+
+body:not(.theme-dark) .token.attr-name,
+body:not(.theme-dark) .token.builtin,
+body:not(.theme-dark) .token.char,
+body:not(.theme-dark) .token.inserted,
+body:not(.theme-dark) .token.selector,
+body:not(.theme-dark) .token.string {
+    color: #690
+}
+
+body:not(.theme-dark) .language-css .token.string,
+body:not(.theme-dark) .style .token.string,
+body:not(.theme-dark) .token.entity,
+body:not(.theme-dark) .token.operator,
+body:not(.theme-dark) .token.url {
+    color: #9a6e3a;
+}
+
+body:not(.theme-dark) .token.atrule,
+body:not(.theme-dark) .token.attr-value,
+body:not(.theme-dark) .token.keyword {
+    color: #07a
+}
+
+body:not(.theme-dark) .token.class-name,
+body:not(.theme-dark) .token.function {
+    color: #dd4a68
+}
+
+body:not(.theme-dark) .token.important,
+body:not(.theme-dark) .token.regex,
+body:not(.theme-dark) .token.variable {
+    color: #e90
+}
+
+body:not(.theme-dark) .token.bold,
+body:not(.theme-dark) .token.important {
+    font-weight: 700
+}
+
+body:not(.theme-dark) .token.italic {
+    font-style: italic
+}
+
+body:not(.theme-dark) .token.entity {
+    cursor: help
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body.theme-dark code[class*=language-],
+body.theme-dark pre[class*=language-] {
+    color: #ccc;
+    background: 0 0;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none
+}
+
+body.theme-dark pre[class*=language-] {
+    padding: 1em;
+    overflow: auto
+}
+
+body.theme-dark :not(pre)>code[class*=language-],
+body.theme-dark pre[class*=language-] {
+    background: #242729
+}
+
+body.theme-dark :not(pre)>code[class*=language-] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal
+}
+
+body.theme-dark .token.block-comment,
+body.theme-dark .token.cdata,
+body.theme-dark .token.comment,
+body.theme-dark .token.doctype,
+body.theme-dark .token.prolog {
+    color: #999
+}
+
+body.theme-dark .token.punctuation {
+    color: #ccc
+}
+
+body.theme-dark .token.attr-name,
+body.theme-dark .token.deleted,
+body.theme-dark .token.namespace,
+body.theme-dark .token.tag {
+    color: #e2777a
+}
+
+body.theme-dark .token.function-name {
+    color: #6196cc
+}
+
+body.theme-dark .token.boolean,
+body.theme-dark .token.function,
+body.theme-dark .token.number {
+    color: #f08d49
+}
+
+body.theme-dark .token.class-name,
+body.theme-dark .token.constant,
+body.theme-dark .token.property,
+body.theme-dark .token.symbol {
+    color: #f8c555
+}
+
+body.theme-dark .token.atrule,
+body.theme-dark .token.builtin,
+body.theme-dark .token.important,
+body.theme-dark .token.keyword,
+body.theme-dark .token.selector {
+    color: #cc99cd
+}
+
+body.theme-dark .token.attr-value,
+body.theme-dark .token.char,
+body.theme-dark .token.regex,
+body.theme-dark .token.string,
+body.theme-dark .token.variable {
+    color: #7ec699
+}
+
+body.theme-dark .token.entity,
+body.theme-dark .token.operator,
+body.theme-dark .token.url {
+    color: #67cdcc
+}
+
+body.theme-dark .token.bold,
+body.theme-dark .token.important {
+    font-weight: 700
+}
+
+body.theme-dark .token.italic {
+    font-style: italic
+}
+
+body.theme-dark .token.entity {
+    cursor: help
+}
+
+body.theme-dark .token.inserted {
+    color: green
+}
+
+
+
+.code.code-text-green *{
+    color: #690 !important;
+}

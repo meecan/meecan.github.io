@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Router | Vanilla Router</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./../dist/styles/main.css">
+    <link rel="stylesheet" href="./../dist/styles/validation.css">
+
+    <link rel="stylesheet" href="./../dist/styles/highlight.css">
+    <script src="./../dist/js/highlight.js"></script>
+</head>
+<body>
+    
+    <aside id="sidebar">
+        <div class="sidebar-content">
+            <span class="sidebar-divider">Get Started</span>
+            <a href="./../start/overview" class="sidebar-item">
+                <span>Feature Overview</span>
+            </a>
+            <a href="./../start/faqs" class="sidebar-item">
+                <span>Faqs</span>
+            </a>
+            <a href="./../start/examples" class="sidebar-item">
+                <span>Examples</span>
+            </a>
+            <a href="./../start/installation" class="sidebar-item">
+                <span>Installation</span>
+            </a>
+
+            <span class="sidebar-divider">Routing</span>
+            <a href="./create-a-router" class="sidebar-item active">
+                <span>Create a Router</span>
+            </a>
+            <a href="./giving-a-link" class="sidebar-item">
+                <span>Giving a Link</span>
+            </a>
+            
+            <span class="sidebar-divider">Guides</span>
+            <a href="./../guides/server-side-rendering" class="sidebar-item">
+                <span>Server-side Rendering</span>
+            </a>
+            <a href="./../guides/contributing" class="sidebar-item">
+                <span>Contributing</span>
+            </a>
+
+
+        </div>
+        <div class="sidebar-buttons">
+            <a href="https://github.com/meecan/vanilla-router-dom" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> See on Github</a>
+        </div>
+    </aside>
+
+    <div class="sidebar-backdrop sidebar-toggle"></div>
+
+    
+    <main id="content">
+        <header id="header">
+            <div class="header-left">
+                <span class="sidebar-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </span>
+                <a href="./../" class="header-logo">
+                    <img src="./../dist/logo.svg" alt="Vanilla router logo.">
+                </a>
+            </div>
+            <div class="header-right">
+                <div class="header-search">
+                    <label class="header-search-bar search-active">
+                        <i class="fa-solid fa-search"></i>
+                        <input type="text" placeholder="Search..." id="searchInput">
+                        <i class="fa-solid fa-xmark" onclick="clearSearch()"></i>
+                    </label>
+                    <div class="header-search-dropdown">
+                        <a href="./../" class="hsd-item" data-keys="download plugin download library">
+                            <span class="hsd-heading">Download</span>
+                            <span class="hsd-nav">Home</span>
+                        </a>
+                        <a href="./../start/overview" class="hsd-item" data-keys="client side routing prevent page refresh serve non-existent urls serve non-existent files features">
+                            <span class="hsd-heading">Features Overview</span>
+                            <span class="hsd-nav">Get Started</span>
+                        </a>
+                        <a href="./../start/faqs" class="hsd-item" data-keys="how can I add vanilla router to my project how can I add a router to my project how can I add a 404 page set a route in subdirectories subfolders script tags head tag not found how to use">
+                            <span class="hsd-heading">FAQs</span>
+                            <span class="hsd-nav">Get Started</span>
+                        </a>
+                        <a href="./../start/examples" class="hsd-item" data-keys="examples example github demo">
+                            <span class="hsd-heading">Examples</span>
+                            <span class="hsd-nav">Get Started</span>
+                        </a>
+                        <a href="./../start/installation" class="hsd-item" data-keys="install installation cdn download">
+                            <span class="hsd-heading">Installation</span>
+                            <span class="hsd-nav">Get Started</span>
+                        </a>
+                        <a href="./../routing/create-a-router" class="hsd-item" data-keys="how to create a router">
+                            <span class="hsd-heading">Create a Router</span>
+                            <span class="hsd-nav">Routing</span>
+                        </a>
+                        <a href="./../routing/giving-a-link" class="hsd-item" data-keys="how to give a link how to provide a link">
+                            <span class="hsd-heading">Giving a Link</span>
+                            <span class="hsd-nav">Routing</span>
+                        </a>
+                        <a href="./../guides/server-side-rendering" class="hsd-item" data-keys="server side rendering apache srver configuration htaccess">
+                            <span class="hsd-heading">Server-side Rendering</span>
+                            <span class="hsd-nav">Guides</span>
+                        </a>
+                        <a href="./../guides/contributing" class="hsd-item" data-keys="contributing">
+                            <span class="hsd-heading">Contributing</span>
+                            <span class="hsd-nav">Guides</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        
+
+
+        
+
+        <section>
+            <div class="container">
+                <h1>Create a Router</h1>
+
+                <h2>What happened to withRouter? I need it!</h2>
+                <p>This question usually stems from the fact that you're using React class components, which don't support hooks. In React Router v6, we fully embraced hooks and use them to share all the router's internal state. But that doesn't mean you can't use the router. Assuming you can actually use hooks (you're on React 16.8+), you just need a wrapper.</p>
+
+                <h3>/project/index.html</h3>
+                <pre class="code" style="margin-bottom: 60px;"><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;nav&gt;
+        &lt;a href="./" target="_self"&gt;Home&lt;/a&gt;
+        &lt;a href="./about" target="_self"&gt;About&lt;/a&gt;
+    &lt;/nav&gt;
+
+    &lt;router-root data-root="/project/"&gt;
+        &lt;router-page data-path="*" data-src="pages/404.html" /&gt;
+        &lt;router-page data-path="./" data-src="pages/home.html" /&gt;
+        &lt;router-page data-path="./about" data-src="pages/about.html" /&gt;
+    &lt;/router-root&gt;
+
+    &lt;script src="./src/router.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+                <h3>/project/pages/home.html</h3>
+                <pre class="code" style="margin-bottom: 60px;"><code class="language-html">&lt;head&gt;
+    &lt;title&gt;Home | Router&lt;/title&gt;
+&lt;/head&gt;
+                
+&lt;div&gt;
+    Home page content
+&lt;/div&gt;
+                
+&lt;script src="./src/home.js"&gt;</code></pre>
+
+
+                <h3>/project/pages/about.html</h3>
+                <pre class="code" style="margin-bottom: 60px;"><code class="language-html">&lt;head&gt;
+    &lt;title&gt;About | Router&lt;/title&gt;
+&lt;/head&gt;
+                
+&lt;div&gt;
+    About page content
+&lt;/div&gt;
+                
+&lt;script src="./src/about.js"&gt;</code></pre>
+
+
+                <h3>/project/pages/404.html</h3>
+                <pre class="code" style="margin-bottom: 60px;"><code class="language-html">&lt;head&gt;
+    &lt;title&gt;Page not found | Router&lt;/title&gt;
+&lt;/head&gt;
+                
+&lt;div&gt;
+    404 page content
+&lt;/div&gt;</code></pre>
+
+
+
+                <h2>Why does &lt;Route&gt; have an element prop instead of render or component?</h2>
+                <p>This question usually stems from the fact that you're using React class components, which don't support hooks. In React Router v6, we fully embraced hooks and use them to share all the router's internal state. But that doesn't mean you can't use the router. Assuming you can actually use hooks (you're on React 16.8+), you just need a wrapper.</p>
+
+
+            </div>
+        </section>
+
+
+
+        <footer id="footer">
+            <div class="container">
+                <span><span>v1.0.0 | Powered by</span> <a href="https://github.com/meecan">meecan</a></span>
+            </div>
+        </footer>
+    </main>
+
+
+    <script src="./../dist/js/main.js"></script>
+</body>
+</html>

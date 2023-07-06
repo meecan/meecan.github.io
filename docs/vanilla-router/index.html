@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Vanilla Router</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./dist/styles/main.css">
+    <link rel="stylesheet" href="./dist/styles/validation.css">
+
+    <link rel="stylesheet" href="./dist/styles/highlight.css">
+    <script src="./dist/js/highlight.js"></script>
+</head>
+<body>
+    
+    <aside id="sidebar">
+        <div class="sidebar-content">
+            <span class="sidebar-divider">Get Started</span>
+            <a href="./start/overview" class="sidebar-item">
+                <span>Feature Overview</span>
+            </a>
+            <a href="./start/faqs" class="sidebar-item">
+                <span>Faqs</span>
+            </a>
+            <a href="./start/examples" class="sidebar-item">
+                <span>Examples</span>
+            </a>
+            <a href="./start/installation" class="sidebar-item">
+                <span>Installation</span>
+            </a>
+
+            <span class="sidebar-divider">Routing</span>
+            <a href="./routing/create-a-router" class="sidebar-item">
+                <span>Create a Router</span>
+            </a>
+            <a href="./routing/giving-a-link" class="sidebar-item">
+                <span>Giving a Link</span>
+            </a>
+            
+            <span class="sidebar-divider">Guides</span>
+            <a href="./guides/server-side-rendering" class="sidebar-item">
+                <span>Server-side Rendering</span>
+            </a>
+            <a href="./guides/contributing" class="sidebar-item">
+                <span>Contributing</span>
+            </a>
+
+
+        </div>
+        <!-- <div class="sidebar-buttons">
+            <a href="https://github.com/meecan/js-form-validation" class="btn btn-dark btn-sm"><i class="fa-brands fa-github"></i> See on Github</a>
+        </div> -->
+    </aside>
+
+    <div class="sidebar-backdrop sidebar-toggle"></div>
+
+
+    <!-- client side routing -> features
+    prevent page refresh -> features
+    serve non-existent urls, serve non-existent files -> features
+    How can I add Vanilla Router to my project, install -> faqs
+    How can I add a router to my project, how to use -> faqs
+    How can I add a 404 page, not fount -> faqs
+    set a route in subdirectories subfolders -> faqs
+    &lt;head&gt; script tags -> faqs
+    examples, sample, demo -> examples
+    installation, cdn, npm, download -> installation
+    usage example how to use how to create -> create a router
+    giving a link, not working -> giving a link
+    server side rendering serve index.html configuration apache htaccess -> server side rendering
+    contributing -> contributing -->
+
+
+
+
+
+
+    
+    <main id="content">
+        <header id="header">
+            <div class="header-left">
+                <span class="sidebar-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </span>
+                <a href="./" class="header-logo">
+                    <img src="dist/logo.svg" alt="Vanilla router logo.">
+                </a>
+            </div>
+            <div class="header-right">
+                <div class="header-search">
+                    <label class="header-search-bar search-active">
+                        <i class="fa-solid fa-search"></i>
+                        <input type="text" placeholder="Search..." id="searchInput">
+                        <i class="fa-solid fa-xmark" onclick="clearSearch()"></i>
+                    </label>
+                    <div class="header-search-dropdown">
+                        <a href="./" class="hsd-item" data-keys="download plugin download library">
+                            <span class="hsd-heading">Download</span>
+                            <span class="hsd-nav">Home</span>
+                        </a>
+                        <a href="./start/overview" class="hsd-item" data-keys="client side routing prevent page refresh serve non-existent urls serve non-existent files features">
+                            <span class="hsd-heading">Features Overview</span>
+                            <span class="hsd-nav">Get Started</span>
+                        </a>
+                        <a href="./start/faqs" class="hsd-item" data-keys="how can I add vanilla router to my project how can I add a router to my project how can I add a 404 page set a route in subdirectories subfolders script tags head tag not found how to use">
+                            <span class="hsd-heading">FAQs</span>
+                            <span class="hsd-nav">Get Started</span>
+                        </a>
+                        <a href="./start/examples" class="hsd-item" data-keys="examples example github demo">
+                            <span class="hsd-heading">Examples</span>
+                            <span class="hsd-nav">Get Started</span>
+                        </a>
+                        <a href="./start/installation" class="hsd-item" data-keys="install installation cdn download">
+                            <span class="hsd-heading">Installation</span>
+                            <span class="hsd-nav">Get Started</span>
+                        </a>
+                        <a href="./routing/create-a-router" class="hsd-item" data-keys="how to create a router">
+                            <span class="hsd-heading">Create a Router</span>
+                            <span class="hsd-nav">Routing</span>
+                        </a>
+                        <a href="./routing/giving-a-link" class="hsd-item" data-keys="how to give a link how to provide a link">
+                            <span class="hsd-heading">Giving a Link</span>
+                            <span class="hsd-nav">Routing</span>
+                        </a>
+                        <a href="./guides/server-side-rendering" class="hsd-item" data-keys="server side rendering apache srver configuration htaccess">
+                            <span class="hsd-heading">Server-side Rendering</span>
+                            <span class="hsd-nav">Guides</span>
+                        </a>
+                        <a href="./guides/contributing" class="hsd-item" data-keys="contributing">
+                            <span class="hsd-heading">Contributing</span>
+                            <span class="hsd-nav">Guides</span>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="container section-container">
+                <h1>Vanilla Router</h1>
+                <p>Routing library developed using pure javascript. It was developed for the first time among modern javascript libraries and shared as open source.</p>
+
+                <a href="https://github.com/meecan/js-form-validation/archive/refs/heads/main.zip" class="btn btn-primary"><i class="fa-solid fa-download"></i> Download Plugin</a>
+                <a href="https://github.com/meecan/js-form-validation" class="btn btn-dark"><i class="fa-brands fa-github"></i> See On Github</a>
+                <!-- <div class="snippets">
+                    <span class="snippet">
+                        <img src="https://img.shields.io/github/downloads/meecan/js-form-validation/total.svg?style=flat-square">
+                    </span>
+                    <span class="snippet">
+                        <img src="https://img.shields.io/badge/licence-MIT-green.svg?style=flat-square">
+                    </span>
+                    <span class="snippet">
+                        <img src="https://img.shields.io/badge/min._file_size-2.00_kB-blue.svg?style=flat-square">
+                    </span>
+                </div> -->
+                
+            </div>
+        </section>
+
+
+
+        <footer id="footer">
+            <div class="container">
+                <span><span>v1.0.0 | Powered by</span> <a href="https://github.com/meecan">meecan</a></span>
+            </div>
+        </footer>
+    </main>
+
+    <script src="./dist/js/main.js"></script>
+</body>
+</html>
