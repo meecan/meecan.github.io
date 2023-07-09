@@ -161,7 +161,8 @@ body.sticky-header{
 
 
 #hero{
-    height: 700px;
+    height: 600px;
+    padding-bottom: 50px;
 }
 
 #hero .container{
