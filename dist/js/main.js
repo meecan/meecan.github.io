@@ -28,25 +28,24 @@ const updateNavlink = (section) => {
 
 
 
-// window.onscroll = () => {
-//     if (!document.body.classList.contains('sticky-header') && window.scrollY > 120) {
-//         document.body.classList.add('sticky-header')
-//     }
+window.onscroll = () => {
+    // if (!document.body.classList.contains('sticky-header') && window.scrollY > 120) {
+    //     document.body.classList.add('sticky-header')
+    // }
 
-//     if (document.body.classList.contains('sticky-header') && window.scrollY <= 20) {
-//         document.body.classList.remove('sticky-header')
-//     }
+    // if (document.body.classList.contains('sticky-header') && window.scrollY <= 20) {
+    //     document.body.classList.remove('sticky-header')
+    // }
 
+    document.querySelectorAll('[data-section]').forEach(section => {
+        const sectionTop = section.offsetTop
+        if (window.scrollY >= sectionTop - 250) {
+            let current = section.getAttribute('data-section')
 
-//     document.querySelectorAll('[data-section]').forEach(section => {
-//         const sectionTop = section.offsetTop
-//         if (window.scrollY >= sectionTop - 340) {
-//             let current = section.getAttribute('data-section')
-
-//             updateNavlink(current)
-//         }
-//     })
-// }
+            updateNavlink(current)
+        }
+    })
+}
 
 
 const dataNavbarToggle = document.querySelectorAll('[data-navbar-toggle]')
